@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>USD Currency Converter</title>
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>USD Currency Converter</h1>
+  <p>Enter an amount in USD to convert to another currency:</p>
+  <form id="currency-form">
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount">
+    <br>
+    <label for="from-currency">From:</label>
+    <select id="from-currency" name="from-currency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+    </select>
+    <br>
+    <label for="to-currency">To:</label>
+    <select id="to-currency" name="to-currency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+    </select>
+    <br>
+    <button type="submit">Calculate</button>
+  </form>
+  
+  <div id="result">
+    Result:
+  </div>
+</body>
+</html>
+
+  
