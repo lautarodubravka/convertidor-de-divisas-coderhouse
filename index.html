@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>USD Currency Converter</title>
-  <script src="main.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <title>Convertidor de divisas</title>
 </head>
 <body>
-  <h1>USD Currency Converter</h1>
-  <p>Enter an amount in USD to convert to another currency:</p>
-  <form id="currency-form">
-    <label for="amount">Amount:</label>
-    <input type="text" id="amount" name="amount">
-    <br>
-    <label for="from-currency">From:</label>
-    <select id="from-currency" name="from-currency">
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="GBP">GBP</option>
-    </select>
-    <br>
-    <label for="to-currency">To:</label>
-    <select id="to-currency" name="to-currency">
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="GBP">GBP</option>
-    </select>
-    <br>
-    <button type="submit">Calculate</button>
-  </form>
-  
-  <div id="result">
-    Result:
+  <div class="container">
+    <h1>Convertidor de divisas</h1>
+    <form id="conversionForm">
+      <label for="amount">Cantidad:</label>
+      <input type="number" id="amount" value="1">
+      <select id="fromCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="MXN">MXN</option>
+        <option value="AUD">AUD</option>
+        <option value="ARS">ARS</option>
+      </select>
+      <label for="toCurrency">a</label>
+      <select id="toCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="MXN">MXN</option>
+        <option value="AUD">AUD</option>
+        <option value="ARS">ARS</option>
+      </select>
+      <button type="submit">Convertir</button>
+    </form>
+    <div id="result">
+      <p>Resultado: <span id="convertedAmount"></span></p>
+    </div>
   </div>
+  <script src="./main.js"></script>
 </body>
 </html>
-
-  
