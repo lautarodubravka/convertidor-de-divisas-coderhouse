@@ -2,12 +2,41 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--CSS-->
   <link rel="stylesheet" href="./CSS/style.css">
-  <title>Convertidor de divisas</title>
+  <!--SASS-->
+  <!--BOOTSTRAP-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+  <title>DOLARIZAME</title>
 </head>
-<body>
+<body class="text-bg-dark p-3">
+<!--NAVBAR-->
+<section>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">DOLARIZAME</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="#conversor">Conversor de divisas</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+<div>
+<h1>La cotización del dólar al instante</h1>
+</div>
+<!--CONVERSOR-->
+<section #conversor>
   <div class="container">
-    <h1>Convertidor de divisas</h1>
+    <h2>Haz la conversión</h2>
     <form id="conversionForm">
       <label for="amount">Cantidad:</label>
       <input type="number" id="amount" value="1">
@@ -34,6 +63,34 @@
       <p>Resultado: <span id="convertedAmount"></span></p>
     </div>
   </div>
-  <script src="./main.js"></script>
+</section>
+<!--TABLA DE CONVERSIONES-->
+<div class="container-fluid">
+  <h2 class="text-center p-3">Historial de conversiones</h2>
+  <div>
+    <form class="form-inline my-2 my-lg-0 row-cols-6">
+    <input class="form-control mr-sm-2" type="search" placeholder="Buscar conversiones" aria-label="Search" id="searchInput">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchBtn">Buscar</button>
+  </form>
+  </div>
+  <div class="row texto-lista">
+    <div class="col-md-12">
+      <table class="table table-striped" id="conversionForm">
+        <thead>
+          <tr>
+             <th>Cantidad</th>
+             <th>De</th>
+             <th>A</th>
+             <th>Fecha</th>
+          </tr>
+        </thead>
+    <tbody id="conversion-history conversionForm">
+      <!-- Aquí se agregarán las filas con los datos de las conversiones -->
+    </tbody>
+  </table>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<script src="./main.js"></script>
 </body>
 </html>
