@@ -57,7 +57,7 @@ form.addEventListener("submit", async (event) => {
   }
 });
 
-/*TABLA DE HISTORIAL DE BUSQUEDAS DEL USUARIO*/
+/*TABLA DE HISTORIAL DE BUSQUEDAS REALIZADAS POR EL USUARIO*/
 
 let conversionHistory = [];
 

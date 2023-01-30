@@ -1,3 +1,4 @@
+/*GLOBALES*/
 body {
     background-color: #333;
     color: rgb(102, 196, 133);
@@ -8,6 +9,7 @@ body {
     margin: 0 auto;
     padding: 4rem;
   }
+/*ESPECÍFICAS*/
   h1 {
     color: rgb(102, 196, 133) !important;
   }
