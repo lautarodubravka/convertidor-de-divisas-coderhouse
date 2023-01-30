@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--CSS-->
   <link rel="stylesheet" href="./CSS/style.css">
-  <!--SASS-->
+    <!--Fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;700&display=swap" rel="stylesheet">
   <!--BOOTSTRAP-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  
   <title>DOLARIZAME</title>
 </head>
 <body class="text-bg-dark p-3">
@@ -26,65 +28,80 @@
         <div class="navbar-nav">
           <a class="nav-link" href="#conversor">Conversor de divisas</a>
         </div>
-      </div>
+      </div> 
     </div>
   </nav>
 </section>
-<div>
-<h1>La cotización del dólar al instante</h1>
+<div class="center mx-auto">
+<h1>Cotizaciones al instante</h1>
 </div>
 <!--CONVERSOR-->
 <section #conversor>
-  <div class="container">
+  <div class="container center">
     <h2>Haz la conversión</h2>
     <form id="conversionForm">
-      <label for="amount">Cantidad:</label>
-      <input type="number" id="amount" value="1">
-      <select id="fromCurrency">
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
-        <option value="MXN">MXN</option>
-        <option value="AUD">AUD</option>
-        <option value="ARS">ARS</option>
-      </select>
-      <label for="toCurrency">a</label>
-      <select id="toCurrency">
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
-        <option value="MXN">MXN</option>
-        <option value="AUD">AUD</option>
-        <option value="ARS">ARS</option>
-      </select>
-      <button type="submit">Convertir</button>
+      <div class="form-group d-block">
+        <label for="amount">Cantidad:</label>
+      </div>
+      <div class="form-group d-block">   
+        <input type="number" id="amount" value="100" class="form-control">
+      </div>
+      <div class="form-group d-block">
+        <label for="fromCurrency">Desde:</label>
+        <select id="fromCurrency" class="form-control">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="MXN">MXN</option>
+          <option value="AUD">AUD</option>
+          <option value="ARS">ARS</option>
+        </select>
+      </div>
+      <div class="form-group d-block">
+        <label for="toCurrency">Hacia:</label>
+        <select id="toCurrency" class="form-control">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="MXN">MXN</option>
+          <option value="AUD">AUD</option>
+          <option value="ARS">ARS</option>
+        </select>
+      </div>
+      <div class="form-group d-block">
+        <button type="submit" class="btn btn-primary mt-3">Convertir</button>
+      </div>
     </form>
-    <div id="result">
+    <div id="result" class="mt-3">
       <p>Resultado: <span id="convertedAmount"></span></p>
     </div>
   </div>
 </section>
+<section>
+  <p class="text-bg-danger" id="important-message">IMPORTANTE: en la conversión entre USD y ARS figura la cotización al precio que impone el gobierno de Argentina, 
+    la cual no representa la realidad del precio del USD en Argentina. 
+    Para conocer la cotización verdadera del USD en ARS consultar la cotización del 'dólar Blue' en 
+    nuestra página principal.</p>
+</section>
 <!--TABLA DE CONVERSIONES-->
 <div class="container-fluid">
-  <h2 class="text-center p-3">Historial de conversiones</h2>
-  <div>
-    <form class="form-inline my-2 my-lg-0 row-cols-6">
-    <input class="form-control mr-sm-2" type="search" placeholder="Buscar conversiones" aria-label="Search" id="searchInput">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchBtn">Buscar</button>
-  </form>
+  <div class="form-group d-block text-center">
+    <h3>Historial de conversiones</h3>
+    <input type="search" id="search" placeholder="filtrar conversiones" class="form-control mb-3">
   </div>
-  <div class="row texto-lista">
-    <div class="col-md-12">
-      <table class="table table-striped" id="conversionForm">
+  <div class="row texto-lista d-flex justify-content-center">
+    <div class="col-md-8">
+      <table class="table table-striped table-responsive table-sm mx-auto" id="conversionForm">
         <thead>
           <tr>
-             <th>Cantidad</th>
              <th>De</th>
              <th>A</th>
+             <th>Monto a convertir</th>             
+             <th>Total</th>
              <th>Fecha</th>
           </tr>
         </thead>
-    <tbody id="conversion-history conversionForm">
+    <tbody class="text-bg-light" id="conversion-history">
       <!-- Aquí se agregarán las filas con los datos de las conversiones -->
     </tbody>
   </table>
