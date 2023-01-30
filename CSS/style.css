@@ -9,7 +9,7 @@ body {
     padding: 4rem;
   }
   h1 {
-    color: rgb(102, 196, 133);
+    color: rgb(102, 196, 133) !important;
   }
   #important-message {
     display: none;
@@ -35,8 +35,17 @@ body {
   .texto-lista th {
   color:rgb(102, 196, 133);
   }
-  .btn .btn-primary {
+  button.btn-convertir {
+    background-color: rgb(102, 196, 133);
+    border: rgb(102, 196, 133);
     margin-top: 1rem;
+  }
+  button.btn-convertir:hover {
+    background-color: rgb(153, 206, 171);
+  }
+  button.btn-convertir:active {
+    background-color: rgb(27, 119, 58);
+    border-color: rgb(27, 119, 58);
   }
   input[type="search"] {
     width: 25rem;
