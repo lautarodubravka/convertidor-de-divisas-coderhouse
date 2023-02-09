@@ -1,0 +1,64 @@
+.footer {
+  margin-top: 4rem; }
+
+body {
+  background-color: #333;
+  color: #66c485;
+  font-family: 'Source Code Pro', sans-serif !important; }
+  body .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem; }
+  body .navbar {
+    margin-bottom: 2rem; }
+
+h1, h2, h3 {
+  color: #66c485 !important; }
+
+#important-message {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s linear; }
+
+.center {
+  text-align: center; }
+
+input[type="number"] {
+  background-color: #fff;
+  color: #66c485;
+  border: 1px solid #fff; }
+
+select {
+  background-color: transparent;
+  color: #66c485;
+  border: 1px solid #fff; }
+
+.form-control {
+  width: 5rem; }
+
+.texto-lista th {
+  color: #66c485; }
+
+button.btn-convertir {
+  background-color: #66c485;
+  border: #66c485;
+  margin-top: 1rem; }
+  button.btn-convertir:hover {
+    background-color: #99ceab; }
+  button.btn-convertir:active {
+    background-color: #1b773a;
+    border-color: #1b773a; }
+
+input[type="search"] {
+  width: 20rem;
+  margin: auto;
+  text-align: center; }
+
+.spinner-img {
+  width: 5%;
+  margin: 0.5rem 0.5rem;
+  display: flexbox; }
+
+.warning-content {
+  margin-top: 0rem;
+  margin-bottom: 4rem; }

@@ -20,12 +20,13 @@ function convertCurrency(amount, exchangeRate, fromCurrency, toCurrency) {
     return amount;
   }
   if (exchangeRate) {
-    return (amount * exchangeRate).toFixed(2);
+    return (amount * exchangeRate).toFixed(0);
   } else {
     return "Tasa de cambio no disponible";
   }
 }
 async function updateExchangeRates(fromCurrency, toCurrency) {
+  document.getElementById("loading-spinner").style.display = "block";
   try {
       const response = await fetch(`https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${fromCurrency}&to_currency=${toCurrency}&apikey=${API_KEY}`);
       const data = await response.json();
@@ -37,6 +38,7 @@ async function updateExchangeRates(fromCurrency, toCurrency) {
   } catch (error) {
       console.log(error);
   }
+  document.getElementById("loading-spinner").style.display = "none";
 }
 
 const form = document.getElementById("conversionForm");
@@ -58,23 +60,30 @@ form.addEventListener("submit", async (event) => {
 });
 
 /*TABLA DE HISTORIAL DE BUSQUEDAS REALIZADAS POR EL USUARIO*/
-
 let conversionHistory = [];
 
 function addToConversionHistory(convertedAmount, fromCurrency, toCurrency, date, amount) {
-conversionHistory.push({ convertedAmount, fromCurrency, toCurrency, date, amount });
+  conversionHistory.push({
+    convertedAmount,
+    fromCurrency,
+    toCurrency,
+    date: luxon.DateTime.fromJSDate(date, { locale: 'es' }).toLocaleString(luxon.DateTime.DATETIME_FULL),
+    amount
+  });
 }
 
 function displayConversionHistory(history = conversionHistory) {
-const historyTable = document.getElementById("conversion-history");
-historyTable.innerHTML = "";
-for (let i = 0; i < history.length; i++) {
-const conversion = history[i];
-const row = document.createElement("tr");
-row.innerHTML = `<td>${conversion.fromCurrency}</td> <td>${conversion.toCurrency}</td> <td>${conversion.amount}</td> <td>${conversion.convertedAmount}</td> <td>${conversion.date.toLocaleString()}</td>`;
-historyTable.appendChild(row);
+  const historyTable = document.getElementById("conversion-history");
+  historyTable.innerHTML = "";
+  for (let i = 0; i < history.length; i++) {
+    const conversion = history[i];
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${conversion.fromCurrency}</td> <td>${conversion.toCurrency}</td> <td>${conversion.amount}</td> <td>${conversion.convertedAmount}</td> <td>${conversion.date}</td>`;
+    historyTable.appendChild(row);
+  }
 }
-}
+
+
   /*Campo de búsqueda*/
 
   const searchField = document.getElementById("searchInput");
