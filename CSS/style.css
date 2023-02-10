@@ -8,14 +8,14 @@ body {
   max-width: 700px;
   margin: 0 auto;
   padding: 4rem;
-  }
+}
 .navbar {
   margin-bottom: 2rem;
-  }
+}
 /*ESPECÍFICAS*/
 h1, h2, h3 {
     color: rgb(102, 196, 133) !important;
-  }
+}
 .border {
   border-radius: 1rem;
 }
@@ -48,6 +48,8 @@ button.btn-convertir {
   background-color: rgb(102, 196, 133);
   border: rgb(102, 196, 133);
   margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
 }
 button.btn-convertir:hover {
   background-color: rgb(153, 206, 171);
@@ -67,6 +69,18 @@ width: 5%;
 margin: 0.5rem 0.5rem;
 display: flexbox;
 }
+/*RESULT*/
+#resultText {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+#result {
+  text-align: center;  
+  border-radius: 1rem;
+}
+
 /*WARNING ADVICE*/
 .warning-content {
   border-radius: 1rem;
