@@ -1,62 +1,66 @@
 /*GLOBALES*/
 body {
-    background-color: #333;
-    color: rgb(102, 196, 133);
-    font-family: 'Source Code Pro', sans-serif !important;
+  background-color: #333;
+  color: rgb(102, 196, 133);
+  font-family: 'Source Code Pro', sans-serif !important;
+}
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem;
   }
-  .container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 4rem;
-  }
-  .navbar {
-margin-bottom: 2rem;
+.navbar {
+  margin-bottom: 2rem;
   }
 /*ESPECÍFICAS*/
-  h1, h2, h3 {
+h1, h2, h3 {
     color: rgb(102, 196, 133) !important;
   }
-  #important-message {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s linear;
-  }  
-  .center {
-    text-align: center;
-  }
-  input[type="number"] {
-    background-color: #fff;
-    color: rgb(102, 196, 133);
-    border: 1px solid #fff;
-  }
-  select {
-    background-color: transparent;
-    color: rgb(102, 196, 133);
-    border: 1px solid #fff;
-  }
-  .form-control {
-    width: 5rem;
-  }
-  .texto-lista th {
+.border {
+  border-radius: 1rem;
+}
+#important-message {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}  
+.center {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+input[type="number"] {
+  background-color: #fff;
+  color: rgb(102, 196, 133);
+  border: 1px solid #fff;
+}
+select {
+  background-color: transparent;
+  color: rgb(102, 196, 133);
+  border: 1px solid #fff;
+}
+.form-control {
+  width: 5rem;
+}
+.texto-lista th {
   color:rgb(102, 196, 133);
-  }
-  button.btn-convertir {
-    background-color: rgb(102, 196, 133);
-    border: rgb(102, 196, 133);
-    margin-top: 1rem;
-  }
-  button.btn-convertir:hover {
-    background-color: rgb(153, 206, 171);
-  }
-  button.btn-convertir:active {
-    background-color: rgb(27, 119, 58);
-    border-color: rgb(27, 119, 58);
-  }
-  input[type="search"] {
-    width: 20rem;
-    margin: auto;
-    text-align: center;
-  }
+}
+button.btn-convertir {
+  background-color: rgb(102, 196, 133);
+  border: rgb(102, 196, 133);
+  margin-top: 1rem;
+}
+button.btn-convertir:hover {
+  background-color: rgb(153, 206, 171);
+}
+button.btn-convertir:active {
+  background-color: rgb(27, 119, 58);
+  border-color: rgb(27, 119, 58);
+}
+input[type="search"] {
+  width: 20rem;
+  margin: auto;
+  text-align: center;
+}
 /*LOADING*/
 .spinner-img {
 width: 5%;
@@ -67,10 +71,15 @@ display: flexbox;
 .warning-content {
   border-radius: 1rem;
 }
-  .close {
+.close {
 border-radius: 1rem;
     }
-  /*FOOTER*/
-  .footer {
+/*HISTORIAL*/
+.historial {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/*FOOTER*/
+.footer {
     margin-top: 4rem;
-    }
+}
