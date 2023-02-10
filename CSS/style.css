@@ -70,10 +70,14 @@ display: flexbox;
 /*WARNING ADVICE*/
 .warning-content {
   border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 .close {
 border-radius: 1rem;
-    }
+margin-bottom: 0.5rem;
+margin-top: 0rem;
+}
 /*HISTORIAL*/
 .historial {
   margin-top: 2rem;
