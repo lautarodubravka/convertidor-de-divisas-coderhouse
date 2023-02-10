@@ -1,19 +1,6 @@
+//CONVERSOR//
 const API_KEY = "YA430D84G5AYNSJV"; /*La clave API iría en el backend para mayor seguridad*/
 const exchangeRates = {};
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    const message = document.getElementById("important-message");
-    message.style.display = "block";
-    let opacity = 0;
-    const timer = setInterval(() => {
-      opacity += 0.05;
-      message.style.opacity = opacity;
-      if (opacity >= 1) {
-        clearInterval(timer);
-      }
-    }, 50);
-  }, 2000);
-});
 function convertCurrency(amount, exchangeRate, fromCurrency, toCurrency) {
   if (fromCurrency === toCurrency) {
     return amount;

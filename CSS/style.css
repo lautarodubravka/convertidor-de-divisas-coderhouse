@@ -65,9 +65,11 @@ display: flexbox;
 }
 /*WARNING ADVICE*/
 .warning-content {
-  margin-top: 0rem;
-  margin-bottom: 4rem;
-  }
+  border-radius: 1rem;
+}
+  .close {
+border-radius: 1rem;
+    }
   /*FOOTER*/
   .footer {
     margin-top: 4rem;
