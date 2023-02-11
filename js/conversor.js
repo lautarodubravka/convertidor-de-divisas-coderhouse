@@ -8,7 +8,7 @@ function convertCurrency(amount, exchangeRate, fromCurrency, toCurrency) {
   if (exchangeRate) {
     return (amount * exchangeRate).toFixed(0);
   }
-  return "Tasa de cambio no disponible";
+  return "cotización no disponible";
 }
 async function updateExchangeRates(fromCurrency, toCurrency) {
   document.getElementById("loading-spinner").style.display = "block";
